@@ -7,8 +7,15 @@
         <form string="Visita">
           <sheet>
             <group name="group_top">
-              <group name="group_left"> </group>
-               <group name="group_right"> </group>
+              <group name="group_left"> 
+                <field name="customer"/>
+                <field name="date"/>
+                <field name="type"/>
+                </group>
+                <group name="group_right">
+                  <field name="name"/>
+                  <field name="done"/>
+                </group>
               </group>
 
            
@@ -16,6 +23,40 @@
         </form>
       </field>
     </record>
+<!--
+    <record id="view_laso_visit_tree" model="ir.ui.view">
+      <field name="name">view.laso.visit.tree</field>
+      <field name="model">laso.visit</field>
+      <field name="arch" type="xml">
+        <tree string="Visit"/>
+          <field name="customer"/>
+          <field name="name"/>
+          <field name="type"/>
+          <field name="date"/>
+        </tree>
+      </field>
+    </record>
+-->
+    <record id="action_laso_view" model="ir.actions.act_window">
+      <field name="name">action.laso.view</field>
+      <field name="type">ir.actions.act.window </field>
+      <field name="res_model">laso.visit</field>
+      <field name="view_mode">tree, form</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">
+        visitas
+        </p>
+        <p>
+        click nuevo para añadir elementos
+        </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_laso_root" name="laso" sequence="10" />
+
+    <menuitem id="menu_laso_visit_categoria" name="Operaciones" parent="menu_laso_root" sequence="8"/>
+
+    <menuitem id="menu_laso_visit" name="Visitas" parent="menu_laso_visit_categoria" sequence="0" action=""/>
     
   </data>
 </odoo>
