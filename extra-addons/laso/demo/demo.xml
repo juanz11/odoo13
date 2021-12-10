@@ -1,11 +1,14 @@
 <odoo>
     <data>
-        <!--  -->
-        <!--   <record id="object0" model="laso.laso"> -->
-        <!--     <field name="name">Object 0</field> -->
-        <!--     <field name="value">0</field> -->
-        <!--   </record> -->
-        <!--  -->
+       
+        <record id="visit0" model="laso.visit"> 
+            <field name="name">Visita importada</field> 
+            <field name="customer">Cliente importado</field>
+            <field name="date">2021-12-10</field>
+            <field name="type">P</field>
+            <field name="done">1</field> 
+        </record>
+        
         <!--   <record id="object1" model="laso.laso"> -->
         <!--     <field name="name">Object 1</field> -->
         <!--     <field name="value">10</field> -->
