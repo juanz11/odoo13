@@ -38,17 +38,17 @@ class Visit(models.Model):
 
      def f_search_update(self):
         visit = self.env['laso.visit'].search([('name', '=', 'ORM test')])
-        print('search()', visit, visit.name)
+        #print('search()', visit, visit.name)
+      
+        #visit[:1].write({'name': 'ORM test write uhu'})
+        #visit_b = self.env['laso.visit'].browse(visit)
+        #print('browse()', visit_b, visit_b.name)
 
-        visit_b = self.env['laso.visit'].browse(visit[:1])
-        print('browse()', visit_b, visit_b.name)
-
-        visit.write({
-            'name': 'ORM test write uhu'
-        })
+        for v in visit:
+           v.write({'name': 'ORM test write uhu'})
 
      def f_delete(self):
-        visit = self.env['laso.visit'].browse([8])
+        visit = self.env['laso.visit'].search([('name', '=', 'ORM test write uhu')])
         visit.unlink()
 
   #   value = fields.Integer()
