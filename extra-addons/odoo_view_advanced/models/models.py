@@ -8,6 +8,10 @@ class CustomItem(models.Model):
     name = fields.Char(string='Descripción')
     unit_price = fields.Char(string='Precio unitario')
 
+    def remove_items(self, user):
+        print('Borrando items...')
+        return True
+
 
 #este modelo procesa la subida de archivos y se define como un modelo Transient
 class UploadFile(models.TransientModel):

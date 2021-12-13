@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- Esto es un estandar -->
+<template xml:space="preserve"> <!-- Preservo los espacios en blanco sobrantes -->
+	<t t-extend="ListView.buttons"> <!-- Extiendo el template de la vista del modelo especificado -->
+	  <t t-jquery="button.o_list_button_add" t-operation="before"> 
+      <!-- 
+          t-jquery se usa para indicar una posicion, los elementos que cree en esta etiqueta se ubicaran
+          antes o despues de button.o_list_button_add en la vista de custom_item
+       -->
+		<button t-if="widget.modelName == 'odoo_view_advanced.custom_item'" class="btn btn-primary oe_action_button" type="button" accesskey="f">Borrar productos</button>
+	  </t>
+	</t>
+</template>

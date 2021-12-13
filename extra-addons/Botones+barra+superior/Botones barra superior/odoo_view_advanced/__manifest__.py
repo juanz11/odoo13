@@ -31,7 +31,7 @@
     'demo': [
         'demo/demo.xml',
     ],
-    'qweb':[
-        'static/xml/button.xml'
+    'qweb': [
+        'static/src/xml/button.xml'
     ]
 }
