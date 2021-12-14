@@ -6,9 +6,9 @@
             <field name="arch" type="xml">
                 <form string="Visita">
                     <sheet>   <!--esta etiqueta representa lo de adentro el cuadro-->
-                        <div class="oe_button_box" name="button_box">
+                        <div class="oe_button_box" name="button_box"> <!--caja de botones-->
                             <button name="toggle_state" type="object" class="oe_stat_button"
-                                    string="Cambiar realizada" icon="fa-play-circle"
+                                    string="Cambiar realizada por juan" icon="fa-play-circle"
                             />
                         </div>
                         <group name="group_top"> <!--estrutura de los campos-->
@@ -33,18 +33,18 @@
             <field name="model">custom_crm.visit</field>
             <field name="arch" type="xml">
                 <tree string="Visit">  <!--vista arbol -->
-                    <field name="customer"/>
+                    <field name="customer"/>  <!--que campo quiero que muestre las columnas-->
                     <field name="name"/>
                     <field name="type"/>
-                    <field name="date"/>
+                    <field name="date"/> <!--definiendo el boton-->
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
                 </tree>
             </field>
         </record>
-
-        <record id="view_custom_crm_visit_kanban" model="ir.ui.view">
+        <!--vista canva muy buena para ver miniaturas he imagen-->
+        <record id="view_custom_crm_visit_kanban" model="ir.ui.view"> 
             <field name="name">view.custom.crm.visit.kanban</field>
             <field name="model">custom_crm.visit</field>
             <field name="arch" type="xml">
@@ -101,8 +101,8 @@
             </field>
         </record>
 
-        <record id="action_custom_crm_visit_view" model="ir.actions.act_window">
-            <field name="name">Visita</field>
+        <record id="action_custom_crm_visit_view" model="ir.actions.act_window"> <!--las vistas con el elemento menu-->
+            <field name="name">VisitaL</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">custom_crm.visit</field>
             <field name="view_mode">tree,form,kanban</field>
@@ -115,7 +115,7 @@
                 </p>
             </field>
         </record>
-
+<!--jasjfkjsf@gmail.com usuario admin-->
 
         <record id="view_sale_order_form" model="ir.ui.view">
             <field name="name">view.sale.order.form</field>
@@ -128,12 +128,11 @@
             </field>
         </record>
 
-        <menuitem id="menu_custom_crm_root" name="Custom CRM" sequence="10"/>
+        <menuitem id="menu_custom_crm_root" name="Custom CRM" sequence="10"/> <!--menu para vistas-->
 
-        <menuitem id="menu_custom_crm_visit_categ" name="Operaciones" parent="menu_custom_crm_root" sequence="0"/>
+        <menuitem id="menu_custom_crm_visit_categ" name="OperacionesJ" parent="menu_custom_crm_root" sequence="0"/>
 
-        <menuitem id="menu_custom_crm_visit" name="Visitas" parent="menu_custom_crm_visit_categ" sequence="0"
-                  action="action_custom_crm_visit_view"/>
+        <menuitem id="menu_custom_crm_visit" name="VisitasJ" parent="menu_custom_crm_visit_categ" sequence="0"  action="action_custom_crm_visit_view"/>
 
     </data>
 </odoo>
