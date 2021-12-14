@@ -23,7 +23,7 @@
         <template id="button_render_js" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
                 <!-- CARGO -->
-                <script src="odoo_view_advanced/static/src/js/action_call.js" type="text/javascript"/>
+                <script src="odoo_view_advanced/static/js/action_call.js" type="text/javascript"/>
             </xpath>
         </template>
     </data>
