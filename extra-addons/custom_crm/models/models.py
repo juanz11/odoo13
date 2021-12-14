@@ -58,8 +58,8 @@ class VisitReport(models.AbstractModel): #va ederada de abstract model que se ut
         report = report_obj._get_report_from_name('custom_crm.report_visit_card') #definir el report el nombre de visit  del formulario
         return {                     #return un dicionario
             'doc_ids': docids,
-            'doc_model': self.env['custom_crm.visit'],
-            'docs': self.env['custom_crm.visit'].browse(docids)
+            'doc_model': self.env['custom_crm.visit'],   #nombre del modelo
+            'docs': self.env['custom_crm.visit'].browse(docids)  #pasarle el atributo de las plantilla
         }
 
 
