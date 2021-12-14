@@ -26,7 +26,7 @@
         # 'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
-        'reports/visit.xml'
+        'reports/visit.xml'  #para que nos enlaze el archivo 
     ],
     # only loaded in demonstration mode
     'demo': [

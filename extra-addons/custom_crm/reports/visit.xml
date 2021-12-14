@@ -1,13 +1,13 @@
 <odoo>
-    <data>
+    <data> <!--informar el nombre para el informe especificar el tipo de reporte hay html ect genera un pdf-->
         <report
             string="Informe visita"
             id="custom_crm_visit_report"
             model="custom_crm.visit"
-            report_type="qweb-pdf"
+            report_type="qweb-pdf"   <!----
             name="custom_crm.report_visit_card"
             file="custom_crm.report_visit_card"
             attachment_use="True"
-        />
+        /> <!--Atributo file -->
     </data>
 </odoo>
