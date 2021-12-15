@@ -11,7 +11,7 @@ class VisitController(http.Controller):
         try:
             visits = http.request.env['custom_crm.visit'].sudo().search_read([], ['id', 'name', 'customer', 'done']) #esta variante search read recibe dos parametros un array de duplas los campos que queremos recuperar 
             res = json.dumps(visits, ensure_ascii=False).encode('utf-8') # funcion dumps tranformar ese objeto en una estructura js para poder enviarla le pasamos el dicionario  
-            return Response(res, content_type='application/json;charset=utf-8', status=200)
+            return Response(res, content_type='application/json;charset=utf-8', status=200)  
         except Exception as e:   #la expecion 
-            return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)
+            return Response(json.dumps({'error': str(e)}), content_type='application/json;charset=utf-8', status=505)  #error 505 generar un json le pasamos diccionario una clave error y el errro en la variable e
 

@@ -37,6 +37,7 @@
                     <field name="name"/>
                     <field name="type"/>
                     <field name="date"/> <!--definiendo el boton-->
+                    <!--nombre del objeto nombre en el boton atributos  y el tipo objeto-->
                     <button name="f_create" string="Crear" class="oe_highlight" type="object"/>
                     <button name="f_search_update" string="Buscar/Editar" class="oe_highlight" type="object"/>
                     <button name="f_delete" string="Eliminar" class="oe_highlight" type="object"/>
@@ -119,11 +120,11 @@
 
         <record id="view_sale_order_form" model="ir.ui.view">
             <field name="name">view.sale.order.form</field>
-            <field name="model">sale.order</field>
+            <field name="model">sale.order</field> <!--el modelo-->
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='payment_term_id']" position="after">
-                    <field name="zone" />
+                    <field name="zone" />  <!--expicificamos con el field y el name el valor zone-->
                 </xpath>
             </field>
         </record>
