@@ -63,8 +63,8 @@ class VisitReport(models.AbstractModel): #va ederada de abstract model que se ut
         }
 
 
-class CustomSaleOrder(models.Model):
+class CustomSaleOrder(models.Model): # que erede models. model 
 
-    _inherit = 'sale.order'
+    _inherit = 'sale.order' #atributo especificar el modelo que vamos a entender sale en el modelo
 
-    zone = fields.Selection([('N', 'Norte'), ('C', 'Centro'), ('S', 'Sur')], string='Zona comercial')
+    zone = fields.Selection([('N', 'Norte'), ('C', 'Centro'), ('S', 'Sur')], string='Zona comercial') 
